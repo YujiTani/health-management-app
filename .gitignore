@@ -2,3 +2,7 @@
 node_modules/
 logs/
 web/dashboard.html
+
+# 実行時データ（個人の食事・トレーニング記録）
+data/daily_log.json
+data/training_prs.json

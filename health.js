@@ -86,11 +86,12 @@ async function cmdMeal() {
     const name = args[2];
     const kcal = parseInt(args[3]);
     if (!name || isNaN(kcal)) {
-      console.error('Usage: meal add <名前> <kcal>');
+      console.error('Usage: meal add <名前> <kcal> [--time=HH:MM]');
       process.exit(1);
     }
-    const now = new Date().toTimeString().slice(0, 5);
-    day.meals.push({ name, kcal, time: now });
+    const flags = parseFlags(args.slice(4));
+    const time = flags.time || new Date().toTimeString().slice(0, 5);
+    day.meals.push({ name, kcal, time });
     saveDayLog(log);
 
     const target = calcDailyTarget();
