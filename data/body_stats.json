@@ -1,0 +1,16 @@
+[
+  {
+    "date": "2026-03-29",
+    "weight": 63.0,
+    "bmi": 22.6,
+    "fat_percent": 19.3,
+    "fat_kg": 12.2,
+    "skeletal_muscle_percent": 40.2,
+    "skeletal_muscle_kg": 25.3,
+    "muscle_kg": 47.6,
+    "water_percent": 55.8,
+    "water_kg": 35.2,
+    "visceral_fat": 9.0,
+    "bmr": 1387.3
+  }
+]

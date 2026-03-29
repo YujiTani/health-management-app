@@ -1,0 +1,14 @@
+{
+  "name": "health-tracker",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "カロリー・体組成・筋トレ管理CLI",
+  "main": "health.js",
+  "scripts": {
+    "status": "node health.js status",
+    "notify:noon": "node scripts/notify.js noon",
+    "notify:evening": "node scripts/notify.js evening",
+    "report": "node scripts/notify.js weekly",
+    "dashboard": "node scripts/generate-dashboard.js"
+  }
+}

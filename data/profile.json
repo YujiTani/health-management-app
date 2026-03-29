@@ -1,0 +1,8 @@
+{
+  "height_cm": 167,
+  "age": 40,
+  "sex": "male",
+  "activity_factor": 1.55,
+  "target_deficit_kcal": 350,
+  "note": "TDEE = BMR × activity_factor, 目標 = TDEE - deficit"
+}
