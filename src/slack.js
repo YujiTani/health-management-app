@@ -28,8 +28,11 @@ export async function sendSlack(text, blocks = null) {
 
 export function buildRemainingBlock(time, target, intake, exerciseKcal, remaining) {
   const emoji = remaining > 500 ? '🟢' : remaining > 200 ? '🟡' : '🔴';
+  const isNoon = time === '12:00';
   const meal = remaining > 0
-    ? `昼・夕食それぞれ *${Math.round(remaining / 2)} kcal* 使えます`
+    ? isNoon
+      ? `昼・夕食それぞれ *${Math.round(remaining / 2)} kcal* 使えます`
+      : `夕食に *${remaining} kcal* 使えます`
     : `⚠️ 目標オーバー！ ${Math.abs(remaining)} kcal 超過中`;
 
   return {
